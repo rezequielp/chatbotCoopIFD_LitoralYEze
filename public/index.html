@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conversation Chat App</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/animate.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/chat.css">
+</head>
+
+<body>
+  <h1 class="title"></h1>
+  <div class="wrapper">
+    <nav id="nav" class="nav">
+      <div class="default-nav">
+        <div class="main-nav">
+          <div class="toggle"></div>
+          <div class="main-nav-item"><a href="#" class="main-nav-item-link">Chatbot Demo</a></div>
+          <div class="options"></div>
+        </div>
+      </div>
+    </nav>
+    <div id="inner" class="inner">
+      <div id="content" class="content">
+
+      </div>
+    </div>
+    <div id="bottom" class="bottom">
+      <textarea id="input" placeholder="Qual a sua dúvida?" class="input" onkeydown="conversationApp.inputKeyDown(event, this)"></textarea>
+      <div id="send" class="send" onclick="conversationApp.sendRequest($('#input')[0])"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+    crossorigin="anonymous"></script>
+  <script src="js/api.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/conversation.js"></script>
+
+  <script>
+      (function() {
+        // Initialize all modules
+        conversationApp.init();
+        //PayloadPanel.init();
+      })();
+    </script>
+</body>
+</html>
